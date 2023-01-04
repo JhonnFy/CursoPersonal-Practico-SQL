@@ -1,0 +1,18 @@
+Ejercicio#3:
+Una biblioteca, almacena los datos en una tabla de nombre: 'Libros' Documente los atributos por unidad:
+-Titulo
+-Autor
+-Editorial
+-Precio
+-Cantidad
+
+1-Elimine la tabla, si existe.
+2-Cree la tabla eligiendo el tipo de dato adecuado para cada campo.
+3-Ver la estructura de la tabla
+4-Ingrese algunos registros:
+R1:Datos Cientificos, Ciencas Naturales, Planeta, 854.235, 8000.
+R2:Fundamentos C#, Deitel & Deitel, Mundo Literario, 254.700, 1000.
+R3:Datos Primitivos, Deitel & Deitel, DSR De Software, 875.498, 2000000.
+
+NOTA:
+Su responsabilidad como administrador es recuperar cada atributo de los valores insertados, sin condicionar la consulta.
