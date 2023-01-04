@@ -1,18 +1,5 @@
+--Respuesta: 
 
-/* Una empresa almacena los datos de los empleados, es una tabla de nombre Usuarios
-1-Eliminar la tabla si existe.
-2-Crear la tabla.
-3-Recuperar las columnas de la tabla.
-4-Insertar data de los nuevos usuarios.
-5-Recuperar el primer atributo.
-6-Recuperar los dos primeros atributos.
-7-Recuperar los tres primeros atributos.
-8-Recuperar los cuatro primeros atributos.
-9-Recuperar los cinco primeros atributos.
-10-Recuperar los seis primeros atributos.
-11-Recuperar toda la DATA
-*/ 
-Repuesta:
 --BOOLEANO
 IF OBJECT_ID('Usuarios') Is Not Null
 DROP TABLE Usuarios;
