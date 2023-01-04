@@ -1,0 +1,17 @@
+Ejercicio#1:
+Un videoclub que alquila peliculas en video, almacena la informacion en una tabla de nombre: 'Peliculas', para cada unidad se documentan los siguientes datos:
+-Nombre, Cadena de caracteres de 40 de longitud.
+-Actor, Cadena de caracteres de 50 de longitud.
+-Duracion, Valor numerico, entero.
+-Cantidad de copias: Valor Entero.
+
+1-Elimine la tabla si existe.
+2-Cree la tabla eligiendo el tipo de dato adecuado para cada campo.
+3-Vea la estructura de la tabla.
+4-Ingrese los siguientes registros:
+R1: MISION Imposible, Tom Cruise, 128,3.
+R2: MISION Imposible2, Tom Cruise, 130,2.
+R3: Mujer Bonita, Julia Roberts, 118, 3.
+R4: Elsa y Fred, China Zorrilla, 110, 2.
+5-Muestre Los Datos.
+6-Muestre Las Columnas.

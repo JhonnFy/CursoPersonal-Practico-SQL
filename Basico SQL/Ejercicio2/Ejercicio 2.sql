@@ -1,17 +1,4 @@
-/*
-Una empresa almacena los datos de sus empleados en una tabla 'Empleados' que almacena: 'Nombre', 'Documento', 'Sexo', 'Domicilio', 'SueldoBasico'.
-1-Elimine la tabla, si existe.
-2-Cree la tabla eligiendo el tipo de dato adecuado para cada campo
-3-Ver la estructura de la tabla
-4-Ingrese algunos registros:
-	R1:Juan Perez, 22333444, M, Sarmiento 123, 500
-	R2:Ana Acosta, 24555666, F, Colon 134,650
-	R3:Bartolome Barrios, 27888999, 'M, Urquiza 479, 800
-5-Seleccionar Todos Los Registros
-6-Ver la estructura de la tabla
-*/
-
-Repuesta:
+--Repuesta:
 
 --CONDICIONAR (Booleano)
 IF OBJECT_ID('Empleados') Is Not Null
