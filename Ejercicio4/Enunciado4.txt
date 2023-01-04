@@ -1,0 +1,23 @@
+Ejercicio#4:
+Un supermercado, minorista, encargado, de recibir, almacenar, y despachar, diferentes 'Articulos', clasifican la mercancía con base en: 
+
+-CodSku.
+-Descripcion1.
+-Descripcion2.
+-Stock. 
+-IdUnidad.
+-CodBarras.
+-IdAlmacen.
+
+
+1-Eliminar la tabla, si existe.
+2-Crear la tabla.
+3-Recuperar las columnas existentes.
+4-Insertar nuevos SKU
+5-Recuperar el primer atributo.
+6-Recuperar los dos primeros atributos.
+7-Recuperar los tres primeros atributos.
+8-Recuperar los cuatro primeros atributos.
+9-Recuperar los seis primeros atributos.
+10-Recuperar los siete primeros atributos.
+11-Recuperar la data

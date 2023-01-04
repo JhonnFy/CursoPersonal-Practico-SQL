@@ -1,3 +1,5 @@
+--Respuesta:
+
 --Condicional (Booleano)
 IF OBJECT_ID('Libros')Is Not Null
 DROP TABLE Libros;
