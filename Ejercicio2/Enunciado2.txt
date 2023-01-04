@@ -1,0 +1,23 @@
+Ejercicio1:
+If OBJECT_ID('Libros') Is Not Null
+	Drop Table Libros;
+
+Create Table Libros(
+	Titulo Varchar(80) Not Null,
+	Autor Varchar(40) Not Null,
+	Editorial Varchar(30) Not Null,
+	Precio Float Not Null,
+	Cantidad Integer Not Null,
+);
+
+INSERT INTO Libros (Titulo, Autor, Editorial, Precio, Cantidad) VALUES ('LaRazonDeSer','MarioMendoza','Planeta',450.000,200);
+INSERT INTO Libros (Titulo, Autor, Editorial, Precio, Cantidad) VALUES ('VivirParaContarla', 'GabrielGarcia','OvejaNegra', 285.700, 8000);
+
+--Recuperar Data
+Select * From Libros
+
+--Consultar Columnas
+Exec sp_columns_100 Libros
+
+
+
