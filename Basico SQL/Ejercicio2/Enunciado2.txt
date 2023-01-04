@@ -1,5 +1,5 @@
 Ejercicio#2:
-Una empresa almacena los datos de sus empleados en una tabla 'Empleados', atributos por usuario: 
+Una empresa almacena los datos de su personal, en una tabla de nombre: 'Empleados'. Documente los atributos por usuario: 
 -Nombre.
 -Documento.
 -Sexo.

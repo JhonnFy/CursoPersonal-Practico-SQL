@@ -1,5 +1,5 @@
 Ejercicio#1:
-Un videoclub que alquila peliculas en video, almacena la informacion en una tabla de nombre: 'Peliculas', para cada unidad se documentan los siguientes datos:
+Un videoclub, almacena la informacion en una tabla de nombre: 'Peliculas', para rentar, cada unidad se documentan los siguientes datos:
 -Nombre, Cadena de caracteres de 40 de longitud.
 -Actor, Cadena de caracteres de 50 de longitud.
 -Duracion, Valor numerico, entero.
