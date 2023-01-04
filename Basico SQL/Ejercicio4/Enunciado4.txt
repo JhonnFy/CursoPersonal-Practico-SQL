@@ -1,5 +1,5 @@
 Ejercicio#4:
-Un supermercado, minorista, encargado, de recibir, almacenar, y despachar, diferentes 'Articulos', clasifican la mercancía con base en: 
+Un supermercado minorista, encargado de: Recibir, almacenar, y despachar, diferentes 'Articulos', clasifican la mercancía con base en: 
 
 -CodSku.
 -Descripcion1.
