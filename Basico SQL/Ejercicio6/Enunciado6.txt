@@ -1,0 +1,17 @@
+Ejercicio#6:
+La compañía distribuidora OficialGame, almacena sus productos, por lotes y pedidos. Necesario relacionar las tablas
+-IdUsuario.
+-PrimerNombre.
+-SegundoNombre.
+-PrimerApellido.
+-SegundoApellido.
+-Departamento. (Puesto que ocupa dentro de la jerarquia empresarial).
+
+
+1-Eliminar la tabla si existe.
+2-Crear la tabla.
+3-Recuperar las columnas de la tabla.
+4-Relacionar las tablas Lotes-SKU.
+5-Relacionar las tablas Pedidos Con CodLote-CodSKU.
+6-Insertar data de los nuevos usuarios.
+7-Recuperar toda la DATA.
