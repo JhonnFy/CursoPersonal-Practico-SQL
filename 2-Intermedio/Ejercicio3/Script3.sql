@@ -1,0 +1,181 @@
+USE APPIASQL
+GO
+
+DROP DATABASE IF EXISTS
+InfoVentas
+GO
+
+DROP PROCEDURE IF EXISTS
+[CrearDATA],
+[CrearPaisAlmacen],
+[CrearEmpleado],
+[CrearClientes],
+[CrearAlmacen],
+[CrearVentas],
+[CrearBodega],
+[CrearTipoDeVenta],
+[CrearProducto];
+GO
+
+DROP TABLE IF EXISTS
+[PaisAlmacen],
+[Empleado],
+[Cliente],
+[Almacen],
+[Venta],
+[Bodega],
+[TipoDeVenta],
+[Producto];
+GO
+
+CREATE PROCEDURE CrearDATA
+AS BEGIN
+CREATE DATABASE InfoVentas
+END
+GO
+EXECUTE DBO.CrearDATA
+GO
+USE InfoVentas
+GO
+
+CREATE PROCEDURE CrearPaisAlmacen
+AS BEGIN
+CREATE TABLE PaisAlmacen(
+Id_Pais INT PRIMARY KEY NOT NULL,
+Nombre VARCHAR(80) NOT NULL,
+PoblacionActual VARCHAR(80) NOT NULL,
+TipoDeMoneda VARCHAR(80) NOT NULL,
+)
+END
+GO
+EXECUTE DBO.CrearPaisAlmacen
+GO
+
+CREATE PROCEDURE CrearEmpleado
+AS BEGIN
+CREATE TABLE Empleado(
+Id_Empleado INT PRIMARY KEY NOT NULL,
+Nombres VARCHAR(80) NOT NULL,
+Apellidos VARCHAR(80) NOT NULL,
+Direccion VARCHAR(80) NOT NULL,
+Salario FLOAT NOT NULL,
+)
+END
+GO
+EXECUTE DBO.CrearEmpleado
+GO
+
+CREATE PROCEDURE CrearClientes
+AS BEGIN
+CREATE TABLE Cliente(
+Id_Cliente INT PRIMARY KEY NOT NULL,
+TipoCliente VARCHAR(80) NOT NULL,
+Nombres VARCHAR(80) NOT NULL,
+Apellidos VARCHAR(80) NOT NULL,
+Ciudad VARCHAR(80) NOT NULL,
+Direccion VARCHAR(80) NOT NULL,
+Pais VARCHAR(80) NOT NULL,
+)
+END
+GO
+EXECUTE DBO.CrearClientes
+GO
+
+CREATE PROCEDURE CrearAlmacen
+AS BEGIN
+CREATE TABLE Almacen(
+Id_Almacen INT PRIMARY KEY NOT NULL,
+AFK_IdBodega INT NOT NULL,
+AFK_IdPais INT NOT NULL,
+AFK_IdEmpleado INT NOT NULL,
+Nombre VARCHAR(80) NOT NULL,
+Ciudad VARCHAR(80) NOT NULL,
+Direccion VARCHAR(80) NOT NULL,
+TelefonoContacto VARCHAR(80) NOT NULL,
+)
+END
+GO
+EXECUTE DBO.CrearAlmacen
+GO
+
+CREATE PROCEDURE CrearVentas
+AS BEGIN
+CREATE TABLE Venta(
+VFK_IdCliente INT NOT NULL,
+VFK_Almacen INT NOT NULL,
+VFK_TipoDeVenta INT NOT NULL,
+VFK_Produto INT NOT NULL,
+TipoDeVenta VARCHAR(80) NOT NULL,
+UnidadDeVenta VARCHAR(80) NOT NULL,
+PrecioUnidad FLOAT NOT NULL,
+)
+END
+GO
+EXECUTE DBO.CrearVentas
+GO
+
+CREATE PROCEDURE CrearBodega
+AS BEGIN
+CREATE TABLE Bodega(
+Id_Bodega INT PRIMARY KEY NOT NULL,
+Nombre VARCHAR(80) NOT NULL,
+Direccion VARCHAR(80) NOT NULL,
+Ciudad VARCHAR(80) NOT NULL,
+)
+END
+GO
+EXECUTE DBO.CrearBodega
+GO
+
+CREATE PROCEDURE CrearTipoDeVenta
+AS BEGIN
+CREATE TABLE TipoDeVenta(
+Id_TipoDeVenta INT PRIMARY KEY NOT NULL,
+Dia DATE NOT NULL,
+Ciudad VARCHAR(80) NOT NULL,
+)
+END
+GO
+EXECUTE DBO.CrearTipoDeVenta
+GO
+
+CREATE PROCEDURE CrearProducto
+AS BEGIN
+CREATE TABLE Producto(
+Id_Producto INT PRIMARY KEY NOT NULL,
+Dia DATE NOT NULL,
+Ciudad VARCHAR(80) NOT NULL,
+)
+END
+GO
+EXECUTE DBO.CrearProducto
+GO
+
+
+ALTER TABLE Almacen
+ADD FOREIGN KEY (AFK_IdBodega) REFERENCES Bodega(Id_Bodega)
+GO
+
+ALTER TABLE Almacen
+ADD FOREIGN KEY (AFK_IdPais) REFERENCES PaisAlmacen(Id_Pais)
+GO
+
+ALTER TABLE Almacen
+ADD FOREIGN KEY (AFK_IdEmpleado) REFERENCES Empleado(Id_Empleado)
+GO
+
+ALTER TABLE Venta
+ADD FOREIGN KEY (VFK_IdCliente) REFERENCES Cliente(Id_Cliente)
+GO
+
+ALTER TABLE Venta
+ADD FOREIGN KEY (VFK_Almacen) REFERENCES Almacen(Id_Almacen)
+GO
+
+ALTER TABLE Venta
+ADD FOREIGN KEY (VFK_TipoDeVenta) REFERENCES TipoDeVenta(Id_TipoDeVenta)
+GO
+
+ALTER TABLE Venta
+ADD FOREIGN KEY (VFK_Produto) REFERENCES Producto(Id_Producto)
+GO
